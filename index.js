@@ -49,7 +49,7 @@ lift.addEventListener('click',function(){
 // 3.登录
 const log = document.querySelectorAll('.log')
 log[0].addEventListener('click',function(){
-  location.href = 'D:/项目/京东网页/login.html'
+  location.href = './login.html'
 })
 
 // 4.用户导航栏
