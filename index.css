@@ -1,0 +1,718 @@
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 16px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  height: 2000px;
+  background-color: #faf7fa;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bottom-log {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  padding: 30px;
+  transition: all 1s;
+  z-index: 999;
+}
+.bottom-log p {
+  color: white;
+  font-size: 18px;
+}
+.bottom-log p i {
+  color: orange;
+}
+.bottom-log button {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: aliceblue;
+}
+.bottom-log .del {
+  cursor: pointer;
+}
+.lift {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  width: 70px;
+  text-align: center;
+  height: 70px;
+  background-color: cornflowerblue;
+  padding-top: 12px;
+  border-radius: 20px 0 0 20px;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s;
+}
+.lift .iconfont {
+  line-height: 16px;
+}
+.lift .txt {
+  font-size: 14px;
+  color: rgba(255, 0, 0, 0.8);
+}
+.ads {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background-color: skyblue;
+  text-align: center;
+}
+.ads p {
+  font-size: 30px;
+}
+.ads .del {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.user-tab {
+  background-color: white;
+  height: 50px;
+}
+.user-tab .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.user-tab .wrapper .left > ul {
+  display: flex;
+}
+.user-tab .wrapper .left > ul .txt {
+  display: inline-block;
+}
+.user-tab .wrapper .left > ul > li {
+  height: 50px;
+  margin-right: 10px;
+  font-size: 12px;
+  padding-top: 18px;
+  color: gray;
+}
+.user-tab .wrapper .left > ul > li .inner {
+  height: 18px;
+  padding: 0 10px;
+  border-right: solid 1px rgba(128, 128, 128, 0.5);
+}
+.user-tab .wrapper .left > ul > li:first-child {
+  position: relative;
+}
+.user-tab .wrapper .left > ul > li:first-child .iconfont {
+  font-size: 12px;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-txt,
+.user-tab .wrapper .left > ul > li:first-child .iconfont {
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:first-child .inner:hover {
+  color: red;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-tab {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100px;
+  height: 200px;
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 99;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-tab ul {
+  width: 100px;
+  text-align: center;
+  height: 180px;
+  border-right: solid 1px transparent;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-tab ul .active {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-tab ul .hover {
+  color: red;
+}
+.user-tab .wrapper .left > ul > li:first-child .area-tab ul li {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:first-child .area {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 100px;
+  background-color: white;
+  width: 130px;
+  height: 200px;
+  border-radius: 0 5px 5px 0;
+  z-index: 99;
+}
+.user-tab .wrapper .left > ul > li:first-child .area ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-tab .wrapper .left > ul > li:first-child .area ul .active {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+}
+.user-tab .wrapper .left > ul > li:first-child .area ul .hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: red;
+  border-radius: 5px;
+}
+.user-tab .wrapper .left > ul > li:first-child .area ul li {
+  margin: 10px 0 10px 20px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:nth-child(2) i {
+  color: red;
+  font-weight: 520;
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:nth-child(2) .log {
+  margin-right: 10px;
+  cursor: default;
+}
+.user-tab .wrapper .left > ul > li:nth-child(2) .free-rgs {
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:nth-child(2) .free-rgs:hover {
+  border-bottom: solid 1px;
+}
+.user-tab .wrapper .left > ul > li:last-child .inner {
+  border-right: none;
+}
+.user-tab .wrapper .left > ul > li:last-child .change {
+  cursor: pointer;
+}
+.user-tab .wrapper .left > ul > li:last-child .change:hover {
+  color: red;
+}
+.user-tab .wrapper .right ul {
+  display: flex;
+}
+.user-tab .wrapper .right ul > li {
+  height: 50px;
+  margin-right: 15px;
+  font-size: 12px;
+  padding-top: 18px;
+  color: gray;
+}
+.user-tab .wrapper .right ul > li:first-child {
+  padding-top: 14px;
+}
+.user-tab .wrapper .right ul > li:first-child .iconfont {
+  color: red;
+  font-size: 17px;
+  vertical-align: baseline;
+}
+.user-tab .wrapper .right ul > li:last-child .inner {
+  border-right: none;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) {
+  width: 76px;
+  position: relative;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .inner {
+  border-left: solid 1px transparent;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  left: -725px;
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px 30px;
+  z-index: 99;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 170px;
+  height: 170px;
+  padding-right: 10px;
+  border-right: solid 1px rgba(128, 128, 128, 0.5);
+  font-size: 14px;
+  color: black;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl:last-child {
+  border-right: none;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl dt {
+  margin-right: 90px;
+  font-weight: bold;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl dt,
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl dd {
+  cursor: pointer;
+  height: 20px;
+  margin-bottom: 15px;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl dd {
+  margin-right: 15px;
+}
+.user-tab .wrapper .right ul > li:nth-child(6) .nav dl dd:hover {
+  color: red;
+}
+.user-tab .wrapper .right ul > li .txt {
+  display: inline-block;
+}
+.user-tab .wrapper .right ul > li .iconfont {
+  font-size: 12px;
+  vertical-align: middle;
+}
+.user-tab .wrapper .right ul > li .inner {
+  cursor: pointer;
+  padding-right: 10px;
+  border-right: solid 1px rgba(128, 128, 128, 0.5);
+}
+.user-tab .wrapper .right ul > li .inner:hover {
+  color: red;
+}
+.header {
+  width: 100%;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 140px;
+}
+.header .wrapper .logo {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.header .wrapper .logo a {
+  font-size: 60px;
+}
+.header .wrapper .search {
+  width: 700px;
+  height: 100px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.header .wrapper .search .top {
+  display: flex;
+  border: solid rgba(255, 0, 0, 0.7);
+  border-radius: 10px;
+  height: 50%;
+  background-color: white;
+}
+.header .wrapper .search .top input {
+  flex: 1;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+.header .wrapper .search .top .iconfont {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 15px;
+  margin-top: 10px;
+}
+.header .wrapper .search .top button {
+  cursor: pointer;
+  width: 80px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  margin-top: 1px;
+  margin-right: 3px;
+}
+.header .wrapper .search .bottom ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.header .wrapper .search .bottom ul li {
+  cursor: pointer;
+  font-size: 13px;
+}
+.header .wrapper .search .bottom ul li:first-child {
+  color: red;
+}
+.header .wrapper .search .bottom ul li:nth-child(2) {
+  color: red;
+}
+.header .wrapper .search .bottom ul li:hover {
+  color: red;
+}
+.header .signin {
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  color: white;
+  background-color: orange;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+.main .hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: auto;
+  height: 420px;
+}
+.main .hide .display {
+  width: 120px;
+  height: 100%;
+  background-color: aquamarine;
+  z-index: 4;
+  cursor: pointer;
+}
+.main .hide .display .txt {
+  width: 50px;
+  margin: 0 auto;
+  height: 210px;
+  margin-top: 100px;
+  font-size: 30px;
+  writing-mode: vertical-rl;
+}
+.main .hide .hidden {
+  position: relative;
+  translate: -600px;
+  width: 600px;
+  height: 100%;
+  background-color: aqua;
+  transition: translate 1s;
+  z-index: 3;
+  cursor: pointer;
+}
+.main .hide .hidden .del {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.main .wrapper {
+  background-color: pink;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.main .wrapper .banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 400px;
+  background-color: skyblue;
+  z-index: 2;
+}
+.main .wrapper .banner .subnav {
+  position: relative;
+  width: 280px;
+  height: 100%;
+  background-color: aliceblue;
+  padding-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main .wrapper .banner .subnav > ul {
+  border-radius: 10px;
+}
+.main .wrapper .banner .subnav > ul li {
+  height: 35px;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.main .wrapper .banner .subnav > ul li:hover {
+  background-color: #d9d9d9;
+}
+.main .wrapper .banner .subnav > ul li .iconfont {
+  margin-right: 10px;
+}
+.main .wrapper .banner .subnav > ul li .separate {
+  margin: 0 5px;
+}
+.main .wrapper .banner .subnav > ul li a {
+  display: inline-block;
+  cursor: pointer;
+}
+.main .wrapper .banner .subnav > ul li a:hover {
+  color: red;
+  border-bottom: solid red 1.5px;
+}
+.main .wrapper .banner .subnav .hidden1,
+.main .wrapper .banner .subnav .hidden2 {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 880px;
+  height: 500px;
+  background-color: white;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: solid red 1px;
+  z-index: 3;
+}
+.main .wrapper .banner .subnav .hidden1 .tab,
+.main .wrapper .banner .subnav .hidden2 .tab {
+  margin-bottom: 15px;
+}
+.main .wrapper .banner .subnav .hidden1 .tab ul,
+.main .wrapper .banner .subnav .hidden2 .tab ul {
+  display: flex;
+}
+.main .wrapper .banner .subnav .hidden1 .tab ul li,
+.main .wrapper .banner .subnav .hidden2 .tab ul li {
+  cursor: pointer;
+  margin-right: 15px;
+  width: auto;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+.main .wrapper .banner .subnav .hidden1 .content,
+.main .wrapper .banner .subnav .hidden2 .content {
+  color: gray;
+}
+.main .wrapper .banner .subnav .hidden1 .content dl,
+.main .wrapper .banner .subnav .hidden2 .content dl {
+  display: flex;
+  margin-bottom: 15px;
+}
+.main .wrapper .banner .subnav .hidden1 .content dl dt,
+.main .wrapper .banner .subnav .hidden2 .content dl dt {
+  cursor: pointer;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.main .wrapper .banner .subnav .hidden1 .content dl dt .txt,
+.main .wrapper .banner .subnav .hidden2 .content dl dt .txt {
+  color: black;
+  font-weight: bold;
+}
+.main .wrapper .banner .subnav .hidden1 .content dl dd,
+.main .wrapper .banner .subnav .hidden2 .content dl dd {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.main .wrapper .banner .subnav .hidden1 .content dl dd:hover,
+.main .wrapper .banner .subnav .hidden2 .content dl dd:hover {
+  color: red;
+  border-bottom: solid red 1.5px;
+}
+.main .wrapper .banner .subnav .hidden1 .right,
+.main .wrapper .banner .subnav .hidden2 .right {
+  width: 200px;
+  height: 150px;
+}
+.main .wrapper .banner .center {
+  width: 560px;
+  height: 100%;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+.main .wrapper .banner .center .top {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: aqua;
+  overflow: hidden;
+}
+.main .wrapper .banner .center .top ul {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  display: flex;
+  width: 1250px;
+  height: 25px;
+  background-color: aqua;
+}
+.main .wrapper .banner .center .top ul li {
+  margin-right: 20px;
+  padding-top: 1px;
+}
+.main .wrapper .banner .center .top ul li a {
+  padding-right: 20px;
+  border-right: gray solid 1px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main .wrapper .banner .center .top .prev,
+.main .wrapper .banner .center .top .next {
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  text-align: center;
+  height: 30px;
+  padding-top: 3px;
+}
+.main .wrapper .banner .center .top .prev .iconfont,
+.main .wrapper .banner .center .top .next .iconfont {
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+.main .wrapper .banner .center .top .prev {
+  display: none;
+  left: 0px;
+  background-image: linear-gradient(to right, #00ffff 0, #00ffff 85%, rgba(0, 255, 255, 0.8) 90%, rgba(0, 255, 255, 0.7) 100%);
+}
+.main .wrapper .banner .center .top .next {
+  right: 0px;
+  background-image: linear-gradient(to left, #00ffff 0, #00ffff 85%, rgba(0, 255, 255, 0.8) 90%, rgba(0, 255, 255, 0.7) 100%);
+}
+.main .wrapper .banner .center .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: teal;
+}
+.main .wrapper .banner .center .bottom .left,
+.main .wrapper .banner .center .bottom .center,
+.main .wrapper .banner .center .bottom .right {
+  width: 180px;
+  height: 100%;
+  background-color: khaki;
+  border-radius: 10px;
+}
+.main .wrapper .banner .center .bottom .left {
+  position: relative;
+  overflow: hidden;
+}
+.main .wrapper .banner .center .bottom .left .ads {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 300px;
+  transition: left 1s;
+}
+.main .wrapper .banner .center .bottom .left .ads img {
+  width: 180px;
+  height: 300px;
+  border-radius: 10px;
+}
+.main .wrapper .banner .center .bottom .left .dots {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 10px;
+}
+.main .wrapper .banner .center .bottom .left .dots li {
+  background-color: aquamarine;
+  width: 10px;
+  margin-right: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main .wrapper .banner .center .bottom .left .dots li:last-child {
+  margin-right: 0;
+}
+.main .wrapper .banner .center .bottom .left .dots li:first-child {
+  flex: 1;
+}
+.main .wrapper .banner .right {
+  width: 280px;
+  height: 100%;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
