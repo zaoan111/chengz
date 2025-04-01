@@ -1,0 +1,338 @@
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+  font: 16px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+body {
+  background-color: antiquewhite;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  margin-bottom: 100px;
+}
+.top .logo a {
+  display: block;
+  width: 195px;
+  height: 41px;
+}
+.top .advice a {
+  color: gray;
+  font-size: 14px;
+}
+.top .advice a:hover {
+  color: red;
+  border-bottom: solid 2px red;
+}
+.policy {
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(255, 165, 0, 0.4);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.policy a {
+  color: blue;
+}
+.policy a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.login {
+  height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.login .reminder {
+  background-color: rgba(255, 165, 0, 0.4);
+  width: 300px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+.login .log-area {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 350px;
+  margin: 0 auto;
+}
+.login .log-area .left .log-tab {
+  height: 50px;
+  line-height: 50px;
+}
+.login .log-area .left .log-tab ul {
+  display: flex;
+  justify-content: center;
+  width: 450px;
+}
+.login .log-area .left .log-tab ul .active {
+  color: red;
+}
+.login .log-area .left .log-tab ul li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+.login .log-area .left .log-tab ul li:first-child {
+  margin-right: 15px;
+}
+.login .log-area .left .log-cont {
+  width: 600px;
+  height: 300px;
+  border-right: solid gray;
+  padding-right: 150px;
+}
+.login .log-area .left .log-cont .psw-log {
+  position: relative;
+}
+.login .log-area .left .log-cont .psw-log input {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.login .log-area .left .log-cont .psw-log input:first-child {
+  margin-bottom: 30px;
+}
+.login .log-area .left .log-cont .psw-log button {
+  width: 100%;
+}
+.login .log-area .left .log-cont .psw-log .forget {
+  float: right;
+  cursor: pointer;
+  font-size: 12px;
+  color: #808080;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 18px;
+}
+.login .log-area .left .log-cont .psw-log .forget:hover {
+  color: red;
+  border-bottom: solid;
+}
+.login .log-area .left .log-cont .psw-log button {
+  cursor: pointer;
+  height: 40px;
+  background-color: palevioletred;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.login .log-area .left .log-cont .psw-log button i {
+  margin-right: 15px;
+}
+.login .log-area .left .log-cont .psw-log button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(255, 192, 203, 0.8);
+}
+.login .log-area .left .log-cont .psw-log .del {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  color: gray;
+  cursor: pointer;
+}
+.login .log-area .left .log-cont .psw-log .del:last-child {
+  top: 95px;
+}
+.login .log-area .left .log-cont .msg-log {
+  position: relative;
+  display: none;
+}
+.login .log-area .left .log-cont .msg-log .area-phone {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(128, 128, 128, 0.3);
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border-right: solid rgba(128, 128, 128, 0.5) 1px;
+  border-radius: 5px 0 0 5px;
+  color: gray;
+}
+.login .log-area .left .log-cont .msg-log input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 70px;
+  background-color: rgba(128, 128, 128, 0.3);
+  padding-left: 20px;
+}
+.login .log-area .left .log-cont .msg-log input:nth-child(2) {
+  margin-bottom: 30px;
+  width: 348px;
+  margin-left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.login .log-area .left .log-cont .msg-log input:nth-child(4) {
+  border-radius: 5px;
+}
+.login .log-area .left .log-cont .msg-log button {
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
+  background-color: palevioletred;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.login .log-area .left .log-cont .msg-log button i {
+  margin-right: 15px;
+}
+.login .log-area .left .log-cont .msg-log button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(255, 192, 203, 0.8);
+}
+.login .log-area .left .log-cont .msg-log .tel-num {
+  display: none;
+  color: gray;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.login .log-area .left .log-cont .msg-log .test-num {
+  display: none;
+  color: red;
+  margin-top: -60px;
+  margin-bottom: 35px;
+}
+.login .log-area .left .log-cont .others {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-style: 12px;
+}
+.login .log-area .left .log-cont .others .other-log {
+  display: flex;
+}
+.login .log-area .left .log-cont .others .other-log a {
+  margin-right: 15px;
+}
+.login .log-area .left .log-cont .others .other-log a:hover {
+  color: red;
+  border-bottom: solid;
+}
+.login .log-area .left .log-cont .others .register {
+  cursor: pointer;
+}
+.login .log-area .left .log-cont .others .register:hover {
+  border-bottom: solid;
+}
+.login .log-area .left .log-cont .get-num {
+  position: absolute;
+  right: 10px;
+  top: 94px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+}
+.login .log-area .right .txt {
+  width: 200px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.login .log-area .right img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.login .log-area .right .phone {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+.login .log-area .right .phone .jd-phone {
+  margin-right: 15px;
+}
+.login .log-area .right .phone .jd-phone a {
+  color: red;
+}
+.footer {
+  height: 50px;
+  margin-top: 30px;
+  text-align: center;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.footer ul li {
+  font-size: 12px;
+  width: 65px;
+  margin-right: 15px;
+}
+.footer ul li a {
+  color: gray;
+  border-right: solid gray 1px;
+  padding-right: 15px;
+}
+.footer ul li:last-child a {
+  border-right: none;
+}
+.footer p {
+  font-size: 14px;
+  color: gray;
+}
